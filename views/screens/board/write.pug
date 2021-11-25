@@ -1,0 +1,17 @@
+extends ../../layout/base.pug
+block content 
+    section.wholeWrapper 
+        section.XX__left 
+            section.rsWeapper 
+                section.writeFormSection 
+                    form(action="/board/write" method = "post")
+                        .wfBox 
+                            label 제목      
+                            input(type="text" name="input_title" placeholder="제목을 입력하세요.")
+                        .wfBox 
+                            label 내용
+                            textarea(name="input_content")
+
+                        input(type="submit" value="WRITE")
+
+        section.XX__right

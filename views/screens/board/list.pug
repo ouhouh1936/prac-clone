@@ -1,0 +1,12 @@
+extends ../layout/base.pug
+block content 
+    section.wholeWrapper 
+        section.XX__left 
+            section.rsWeapper 
+                if loggedIn 
+                    a.writeBtn(href=`/board/detail?bid=${b.id}`)
+                        div #{b.id}
+                        div #{b.title}
+                        div #{b.name}
+                        div #{b.createdAt}
+        section.XX__right

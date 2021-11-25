@@ -1,0 +1,29 @@
+extends ../layout/base.pug
+block content 
+    section.wholeWrapper 
+        section.XX__left
+        section.rsWrapper rswrapper
+            .rsWrapper__box1 이용약관동의
+            .rsWrapper__box2 
+                input#chk1-js(type="checkBox")
+                samp 동의하시겠습니까?
+            .rsWrapper__box3 개인정보처리방침
+            .rsWrapper__box4 
+                input#chk2-js(type="checkBox")
+                samp 동의하시겠습니까?
+            .rsWrapper__box5.signupFromBox 
+                .signupFromBox__left
+                form.signupFromBox__right(action="/signup" method="POST")
+                    input.signupFromBox__right__input(type="text" name="input_mobile" placeholder="MOBILE"  required)
+                    input.signupFromBox__right__input(type="password" name="input_password" placeholder="PASSWORD"  required)
+                    input.signupFromBox__right__input(type="email" name="input_email" placeholder="EMAIL"  required)
+                    input.signupFromBox__right__input(type="text" name="input_name" placeholder="NAME"  required)
+                    input#signupBtn-js(type="submit" value="SIGNUP")
+
+                    
+
+            .rsWrapper__box6 
+
+        section.XX__right
+
+    script(src="/assets/signup.js")
